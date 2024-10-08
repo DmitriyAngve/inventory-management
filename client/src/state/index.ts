@@ -5,7 +5,7 @@ export interface InitialStateTypes {
   isDarkMode: boolean;
 }
 
-// Наяальное состояние
+// Начальное состояние
 // this two properties are going represent our state to determine where this sidebar is closed or is darkmode on
 const initialState: InitialStateTypes = {
   isSidebarCollapsed: false,
