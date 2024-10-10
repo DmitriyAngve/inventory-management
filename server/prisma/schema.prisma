@@ -85,4 +85,4 @@ model ExpenseByCategory {
   date                DateTime
   expenseSummary      ExpenseSummary @relation(fields: [expenseSummaryId], references: [expenseSummaryId])
 }
-// 
+ 
