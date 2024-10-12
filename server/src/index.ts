@@ -5,6 +5,7 @@ import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
 // ROUTE IMPORTS
+import dashboardRoutes from "./routes/dashboardRoutes";
 
 // CONFIGURATIONS
 dotenv.config(); // загружает переменные из .env
@@ -18,9 +19,11 @@ app.use(bodyParser.urlencoded({ extended: false })); // разбирает URL-�
 app.use(cors()); // включает поддержку CORS, позволяющую серверу обрабатывать щапросы с других доменов
 
 // ROUTES
-app.get("/hello", (req, res) => {
-  res.send("hello world2");
-});
+// app.get("/hello", (req, res) => {
+//   res.send("hello world2");
+// });
+
+app.use("/dashboard", dashboardRoutes); // before i had "home" which is going to be app.use("/dashboard") http://localhost:8000/dashboard
 
 // SERVER
 const port = process.env.PORT || 3001;

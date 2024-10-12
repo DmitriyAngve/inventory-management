@@ -10,6 +10,7 @@ const cors_1 = __importDefault(require("cors"));
 const helmet_1 = __importDefault(require("helmet"));
 const morgan_1 = __importDefault(require("morgan"));
 // ROUTE IMPORTS
+const dashboardRoutes_1 = __importDefault(require("./routes/dashboardRoutes"));
 // CONFIGURATIONS
 dotenv_1.default.config(); // загружает переменные из .env
 const app = (0, express_1.default)(); // инициализирует app
@@ -21,11 +22,13 @@ app.use(body_parser_1.default.json()); // разбирает тела запро
 app.use(body_parser_1.default.urlencoded({ extended: false })); // разбирает URL-кодированные данные с использованием библиотеки querystring
 app.use((0, cors_1.default)()); // включает поддержку CORS, позволяющую серверу обрабатывать щапросы с других доменов
 // ROUTES
-app.get("/hello", (req, res) => {
-    res.send("hello world2");
-});
+// app.get("/hello", (req, res) => {
+//   res.send("hello world2");
+// });
+app.use("/dashboard", dashboardRoutes_1.default); // before i had "home" which is going to be app.use("/dashboard") http://localhost:8000/dashboard
 // SERVER
 const port = process.env.PORT || 3001;
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 });
+//
