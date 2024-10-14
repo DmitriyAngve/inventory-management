@@ -1,6 +1,7 @@
 import { useGetDashboardMetricsQuery } from "@/state/api";
 import { ShoppingBag } from "lucide-react";
 import React from "react";
+import Rating from "../(components)/Rating";
 
 // useGetDashboardMetricsQuery - хук из RTK Query, он используется для выполнения запроса к API и получения данных, состояния загрузки, ошибок.
 const CardPopularProducts = () => {
@@ -34,7 +35,7 @@ const CardPopularProducts = () => {
                         ${product.price}
                       </span>
                       <span className="mx-2">|</span>
-                      <Rating />
+                      <Rating rating={product.rating || 0} />
                     </div>
                   </div>
                 </div>
