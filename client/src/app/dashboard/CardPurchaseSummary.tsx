@@ -12,11 +12,9 @@ import {
 } from "recharts";
 
 const CardPurchaseSummary = () => {
-  // dashboardMetrics
   const { data, isLoading } = useGetDashboardMetricsQuery();
   const purchaseData = data?.purchaseSummary || [];
 
-  // Беру последний элемент массива purchaseData, если он пуст, то null
   const lastDataPoint = purchaseData[purchaseData.length - 1] || null;
 
   return (
@@ -30,7 +28,10 @@ const CardPurchaseSummary = () => {
             <h2 className="text-lg font-semibold mb-2 px-7 pt-5">
               Purchase Summary
             </h2>
+            <hr />
           </div>
+
+          {/* BODY */}
           <div>
             {/* BODY HEADER */}
             <div className="mb-4 mt-7 px-7">
