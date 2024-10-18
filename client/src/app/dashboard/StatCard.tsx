@@ -69,6 +69,7 @@ const StatCard = ({
               </div>
               {index < details.length - 1 && <hr />}
             </React.Fragment>
+            //
           ))}
         </div>
       </div>
