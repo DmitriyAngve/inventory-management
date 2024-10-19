@@ -11,6 +11,7 @@ const helmet_1 = __importDefault(require("helmet"));
 const morgan_1 = __importDefault(require("morgan"));
 // ROUTE IMPORTS
 const dashboardRoutes_1 = __importDefault(require("./routes/dashboardRoutes"));
+const productRoutes_1 = __importDefault(require("./routes/productRoutes"));
 // CONFIGURATIONS
 dotenv_1.default.config(); // загружает переменные из .env
 const app = (0, express_1.default)(); // инициализирует app
@@ -26,6 +27,7 @@ app.use((0, cors_1.default)()); // включает поддержку CORS, п�
 //   res.send("hello world2");
 // });
 app.use("/dashboard", dashboardRoutes_1.default); // before i had "home" which is going to be app.use("/dashboard") http://localhost:8000/dashboard
+app.use("/products", productRoutes_1.default); // http://localhost:8000/products
 // SERVER
 const port = process.env.PORT || 3001;
 app.listen(port, () => {
