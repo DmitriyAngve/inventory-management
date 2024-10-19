@@ -85,3 +85,7 @@ export const {
   useGetProductsQuery,
   useCreateProductMutation,
 } = api;
+// Это автоматически сгенерированые хуки, которые используются для выполнения запросов
+// useGetDashboardMetricsQuery - хук для выполнения закроса
+// useGetProductsQuery - хук для выполнения запроса с опциональным search
+// useCreateProductMutation - хук для выполнения мутации createProduct
