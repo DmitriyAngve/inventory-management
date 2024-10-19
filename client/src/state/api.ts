@@ -7,6 +7,12 @@ export interface Product {
   rating?: number;
   stockQuantity: number;
 }
+export interface NewProduct {
+  name: string;
+  price: number;
+  rating?: number;
+  stockQuantity: number;
+}
 
 export interface SalesSummary {
   salesSummaryId: string;
@@ -47,24 +53,35 @@ export interface DashboardMetrics {
 export const api = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: process.env.NEXT_PUBLIC_API_BASE_URL }),
   reducerPath: "api",
-  tagTypes: ["DashboardMetrics"],
+  tagTypes: ["DashboardMetrics", "Products"],
 
-  /*
-  res.json({
-      popularProducts,
-      salesSummary,
-      purchaseSummary,
-      expenseSummary,
-      expenseByCategorySummary,
-    }); - получаю и сохраняю как "DashboardMetrics"
-  */
   endpoints: (build) => ({
     // DashboardMetrics - то, что получаю с бэка, void - то, что отправляю
     getDashboardMetrics: build.query<DashboardMetrics, void>({
       query: () => "/dashboard",
       providesTags: ["DashboardMetrics"],
     }),
+    getProducts: build.query<Product[], string | void>({
+      query: (search) => ({
+        url: "products",
+        params: search ? { search } : {},
+      }),
+      providesTags: ["Products"],
+    }),
+    // mutation - потому что меняю данные
+    createProduct: build.mutation<Product, NewProduct>({
+      query: (newProduct) => ({
+        url: "/products",
+        method: "POST",
+        body: newProduct,
+      }),
+      invalidatesTags: ["Products"],
+    }),
   }),
 });
 
-export const { useGetDashboardMetricsQuery } = api;
+export const {
+  useGetDashboardMetricsQuery,
+  useGetProductsQuery,
+  useCreateProductMutation,
+} = api;
