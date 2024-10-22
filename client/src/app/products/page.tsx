@@ -25,6 +25,10 @@ const Products = () => {
     isError,
   } = useGetProductsQuery(searchTerm);
 
+  // useCreateProductMutation - хук из RTK Query, отправляет данные нового продукта на сервер через POST
+  // handleChange - обновляет состояние formData с данными, введенными пользователем
+  // handleSubmit - ф-ия, вызывающаяся, когда пользователь отправляет форму. Она предотвращает стандартное поведение формы и передает данные формы в ф-ию handleCreateProduct
+  // внутри handleCreateProduct данные продукта отправляются на сервер и исполь-ем createProduct
   const [createProduct] = useCreateProductMutation();
   const handleCreateProduct = async (productData: ProductFormData) => {
     await createProduct(productData);
