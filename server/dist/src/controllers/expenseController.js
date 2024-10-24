@@ -19,7 +19,6 @@ const getExpensesByCategory = (req, res) => __awaiter(void 0, void 0, void 0, fu
                 date: "desc",
             },
         });
-        // modify data
         const expenseByCategorySummary = expenseByCategorySummaryRaw.map((item) => (Object.assign(Object.assign({}, item), { amount: item.amount.toString() })));
         res.json(expenseByCategorySummary);
     }
