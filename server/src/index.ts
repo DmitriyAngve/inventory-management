@@ -8,6 +8,7 @@ import morgan from "morgan";
 import dashboardRoutes from "./routes/dashboardRoutes";
 import productRoutes from "./routes/productRoutes";
 import userRoutes from "./routes/userRoutes";
+import expenseRoutes from "./routes/expenseRoutes";
 
 // CONFIGURATIONS
 dotenv.config(); // загружает переменные из .env
@@ -28,6 +29,7 @@ app.use(cors()); // включает поддержку CORS, позволяющ
 app.use("/dashboard", dashboardRoutes); // before i had "home" which is going to be app.use("/dashboard") http://localhost:8000/dashboard
 app.use("/products", productRoutes); // http://localhost:8000/products
 app.use("/users", userRoutes); // http://localhost:8000/users
+app.use("/expenses", expenseRoutes);
 
 // SERVER
 const port = process.env.PORT || 3001;

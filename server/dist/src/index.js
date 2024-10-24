@@ -13,6 +13,7 @@ const morgan_1 = __importDefault(require("morgan"));
 const dashboardRoutes_1 = __importDefault(require("./routes/dashboardRoutes"));
 const productRoutes_1 = __importDefault(require("./routes/productRoutes"));
 const userRoutes_1 = __importDefault(require("./routes/userRoutes"));
+const expenseRoutes_1 = __importDefault(require("./routes/expenseRoutes"));
 // CONFIGURATIONS
 dotenv_1.default.config(); // загружает переменные из .env
 const app = (0, express_1.default)(); // инициализирует app
@@ -30,6 +31,7 @@ app.use((0, cors_1.default)()); // включает поддержку CORS, п�
 app.use("/dashboard", dashboardRoutes_1.default); // before i had "home" which is going to be app.use("/dashboard") http://localhost:8000/dashboard
 app.use("/products", productRoutes_1.default); // http://localhost:8000/products
 app.use("/users", userRoutes_1.default); // http://localhost:8000/users
+app.use("/expenses", expenseRoutes_1.default);
 // SERVER
 const port = process.env.PORT || 3001;
 app.listen(port, () => {
