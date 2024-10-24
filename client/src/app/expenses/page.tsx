@@ -98,15 +98,15 @@ const Expenses = () => {
       <div className="mb-5">
         <Header name="Expenses" />
         <p className="text-sm text-gray-500">
-          A visual representations of expenses over time
+          A visual representation of expenses over time.
         </p>
       </div>
 
       {/* FILTERS */}
       <div className="flex flex-col md:flex-row justify-between gap-4">
-        <div className="w-full lg:w-1/3 bg-white shadow rounded-lg p-6">
+        <div className="w-full md:w-1/3 bg-white shadow rounded-lg p-6">
           <h3 className="text-lg font-semibold mb-4">
-            Filter By Category and Date
+            Filter by Category and Date
           </h3>
           <div className="space-y-4">
             {/* CATEGORY */}
@@ -115,8 +115,8 @@ const Expenses = () => {
                 Category
               </label>
               <select
-                name="category"
                 id="category"
+                name="category"
                 className={classNames.selectInput}
                 defaultValue="All"
                 onChange={(e) => setSelectedCategory(e.target.value)}
