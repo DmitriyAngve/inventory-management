@@ -58,27 +58,27 @@ cd ../server
 npm install
 ```
 
-### 6. Setup .env file
+#### 6. Setup .env file
 ```bash
 DATABASE_URL=
 ```
 
-### 7. Setup Prisma
+#### 7. Setup Prisma
 Add PostgreSQL Database
 ```bash
 npx prisma generate
 npx prisma db push
 ```
 
-### 8. Start the backend server
+#### 8. Start the backend server
 ```bash
 npm run dev
 ```
-### 9. Start the frontend app
+#### 9. Start the frontend app
 ```bash
 npm run dev
 ```
-### 10. Open your browser and navigate to
+#### 10. Open your browser and navigate to
 ```bash
 http://localhost:3000
 ```
