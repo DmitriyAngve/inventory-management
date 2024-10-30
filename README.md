@@ -8,10 +8,13 @@ This repository contains the code for a full-stack Inventory Management Dashboar
 - **Redux Toolkit Query**: Facilitates API calls for data fetching and caching.
 - **Tailwind CSS**: Utility-first CSS for fast and consistent styling.
 - **Material UI Data Grid**: Complex data handling for the user interface.
+- **Recharts**: A charting library for visualizing data within the dashboard, providing responsive and customizable charts for analytics.
 - **Node.js**: Backend runtime for handling requests and responses.
-- **Prisma**: ORM for type-safe database operations.
+- **PostgreSQL**: The primary database used for storing inventory data, providing reliable and scalable relational data management.
+- **Prisma**: ORM for type-safe database operations with PostgreSQL.
+- 
 - **AWS**:
-  - **RDS**: Managed relational database.
+  - **RDS**: Managed relational database for PostgreSQL.
   - **EC2**: Virtual servers to host backend services.
   - **API Gateway**: Robust APIs for the backend.
   - **Amplify**: Deploys the frontend.
@@ -23,7 +26,6 @@ This repository contains the code for a full-stack Inventory Management Dashboar
 - **Inventory Tracking**: View, update, and manage inventory levels.
 - **User Dashboard**: Overview of products, expenses, and analytics.
 - **Data Filtering and Sorting**: Using Material UI Data Grid to handle complex filtering.
-- **Authentication**: User access management using AWS services.
 - **AWS Deployment**: Scalable and robust deployment on AWS, leveraging services like EC2, RDS, and Amplify.
 
 ## Prerequisites
@@ -53,4 +55,30 @@ cd ../server
 ```
 #### 5. Install dependencies for the server side
 ```bash
-npm ins
+npm install
+```
+
+### 6. Setup .env file
+```bash
+DATABASE_URL=
+```
+
+### 7. Setup Prisma
+Add PostgreSQL Database
+```bash
+npx prisma generate
+npx prisma db push
+```
+
+### 8. Start the backend server
+```bash
+npm run dev
+```
+### 9. Start the frontend app
+```bash
+npm run dev
+```
+### 10. Open your browser and navigate to
+```bash
+http://localhost:3000
+```
