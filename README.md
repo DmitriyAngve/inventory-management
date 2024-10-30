@@ -16,6 +16,8 @@ This repository contains the code for a full-stack Inventory Management Dashboar
   - **API Gateway**: Robust APIs for the backend.
   - **Amplify**: Deploys the frontend.
   - **S3**: Stores static assets.
+ 
+  -   [Explore the Live Demo](https://master.dl10c6nir8ctn.amplifyapp.com/)
 
 ## Key Features
 - **Inventory Tracking**: View, update, and manage inventory levels.
@@ -27,11 +29,28 @@ This repository contains the code for a full-stack Inventory Management Dashboar
 ## Prerequisites
 **Node version 18.x.x**
 
-## Installation and Usage
-### 1. Cloning the repository
-```bash
-git clone https://github.com/YourUsername/inventory-management-dashboard.git
 
-### 2. Install the required dependencies using
+## Installation and Usage
+
+To get started with this project, follow these steps:
+
+#### 1. Clone this repository to your local machine
+
+```bash
+https://github.com/DmitriyAngve/inventory-management.git
+```
+#### 2. Navigate to the client directory
+```bash
+cd client
+```
+#### 3. Install dependencies for the server side
 ```bash
 npm install
+```
+#### 4. Return to the server directory
+```bash
+cd ../server
+```
+#### 5. Install dependencies for the server side
+```bash
+npm ins
