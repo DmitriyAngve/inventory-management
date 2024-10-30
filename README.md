@@ -12,7 +12,7 @@ This repository contains the code for a full-stack Inventory Management Dashboar
 - **Node.js**: Backend runtime for handling requests and responses.
 - **PostgreSQL**: The primary database used for storing inventory data, providing reliable and scalable relational data management.
 - **Prisma**: ORM for type-safe database operations with PostgreSQL.
-- 
+
 - **AWS**:
   - **RDS**: Managed relational database for PostgreSQL.
   - **EC2**: Virtual servers to host backend services.
