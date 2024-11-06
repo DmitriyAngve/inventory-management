@@ -1,6 +1,6 @@
 # Inventory Management Dashboard Project
 
-This repository contains the code for a full-stack Inventory Management Dashboard built with Next.js, Redux, Node.js, and AWS.
+This repository contains the code for a full-stack Inventory Management Dashboard built with Next.js, Redux, Node.js, and deployed on AWS.
 
 ## Technologies Used
 - **Next.js**: The core framework for server-side rendering and routing.
