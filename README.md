@@ -20,7 +20,7 @@ This repository contains the code for a full-stack Inventory Management Dashboar
   - **Amplify**: Deploys the frontend.
   - **S3**: Stores static assets.
  
-  -   [Explore the Live Demo](https://master.dl10c6nir8ctn.amplifyapp.com/)
+[Explore the Live Demo](https://master.dl10c6nir8ctn.amplifyapp.com/)
 
 ## Key Features
 - **Inventory Tracking**: View, update, and manage inventory levels.
